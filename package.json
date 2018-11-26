@@ -1,30 +1,38 @@
 {
-  "name": "brace-expansion-cli",
-  "version": "0.0.0",
-  "description": "CLI to expand brace expressions. Wrapper around https://github.com/juliangruber/brace-expansion",
-  "bin": {
-    "expand": "bin/cli.js"
-  },
-  "engines": {
-    "node": ">=8"
-  },
-  "keywords": [
-    "bash",
-    "sh",
-    "shell",
-    "unix",
-    "brace expansion",
-    "glob",
-    "windows",
-    "portability",
-    "cli",
-    "command-line",
-    "terminal"
-  ],
-  "author": "jdat82 <jean.dat@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "brace-expansion": "^1.1.11",
-    "meow": "^5.0.0"
-  }
+    "name": "brace-expansion-cli",
+    "version": "0.0.0",
+    "description": "CLI to expand brace expressions. Wrapper around https://github.com/juliangruber/brace-expansion",
+    "bin": {
+        "expand": "bin/cli.js"
+    },
+    "engines": {
+        "node": ">=8"
+    },
+    "scripts": {
+        "prerelease": "npm ci",
+        "release": "cross-var npm version $npm_package_new_version -m \"chore: Mark version v%s\"",
+        "postrelease": "git push && git push --tags"
+    },
+    "keywords": [
+        "bash",
+        "sh",
+        "shell",
+        "unix",
+        "brace expansion",
+        "glob",
+        "windows",
+        "portability",
+        "cli",
+        "command-line",
+        "terminal"
+    ],
+    "author": "jdat82 <jean.dat@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "brace-expansion": "^1.1.11",
+        "meow": "^5.0.0"
+    },
+    "devDependencies": {
+        "cross-var": "^1.1.0"
+    }
 }
