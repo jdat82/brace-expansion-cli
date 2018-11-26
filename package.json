@@ -11,7 +11,8 @@
     "scripts": {
         "prerelease": "npm ci",
         "release": "cross-var npm version $npm_package_new_version -m \"chore: Mark version v%s\"",
-        "postrelease": "git push && git push --tags"
+        "postrelease": "git push && git push --tags",
+        "dist": "./publish.js"
     },
     "keywords": [
         "bash",
@@ -33,6 +34,9 @@
         "meow": "^5.0.0"
     },
     "devDependencies": {
-        "cross-var": "^1.1.0"
+        "chalk": "^2.4.1",
+        "cross-var": "^1.1.0",
+        "execa": "^1.0.0",
+        "listr": "^0.14.3"
     }
 }

@@ -10,7 +10,7 @@ const cli = meow(`
       $ expand <expression>
  
     Options
-      --help        This documentation
+      --help, -h        Show help
       --verbose, -v     Verbose output
       --version         Output version
  
@@ -22,6 +22,10 @@ const cli = meow(`
         => file0.jpg file1.jpg file2.jpg file-a.jpg file-b.jpg file-c.jpg
 `, {
     flags:{
+        help:{
+            type:'boolean',
+            alias:'h'
+        },
         verbose:{
             type:'boolean',
             alias:'v',
@@ -29,6 +33,8 @@ const cli = meow(`
         }
     }
 });
+
+if(cli.flags.help) cli.showHelp(0);
 
 let output = '';
 cli.input.forEach(expression => {
