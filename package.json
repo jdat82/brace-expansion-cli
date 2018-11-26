@@ -8,6 +8,7 @@
     "engines": {
         "node": ">=8"
     },
+    "repository": "github:jdat82/brace-expansion-cli",
     "scripts": {
         "prerelease": "npm ci",
         "release": "cross-var npm version $npm_package_new_version -m \"chore: Mark version v%s\"",
