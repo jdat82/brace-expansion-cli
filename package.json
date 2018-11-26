@@ -1,6 +1,6 @@
 {
     "name": "brace-expansion-cli",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "CLI to expand brace expressions. Wrapper around https://github.com/juliangruber/brace-expansion",
     "bin": {
         "expand": "bin/cli.js"
