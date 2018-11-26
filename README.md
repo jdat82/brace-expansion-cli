@@ -10,6 +10,7 @@ npm install -g brace-expansion-cli
 
 # Usage
 
+```markdown
 Usage
   $ expand <expression>
 
@@ -24,3 +25,4 @@ Examples
     
   $ expand file-{0..4..2}.jpg file-{a..e..2}.jpg
     => file0.jpg file1.jpg file2.jpg file-a.jpg file-b.jpg file-c.jpg
+```
